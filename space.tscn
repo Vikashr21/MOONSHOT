@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/spaceship-red-06.png" type="Texture" id=1]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 33.0938, 49.9224 )
+
+[node name="Node2D" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ship" type="KinematicBody2D" parent="."]
+position = Vector2( 302.04, 298.264 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ship"]
+position = Vector2( 1.12253, 1.12247 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="ship"]
+position = Vector2( 0.306213, -0.714233 )
+texture = ExtResource( 1 )
